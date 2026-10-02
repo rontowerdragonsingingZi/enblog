@@ -1,15 +1,14 @@
 window.SNAP = {
-  version: "1.0.53",
+  version: "1.0.54",
   site: "https://rontowerdragonsingingzi.github.io/enblog/",
-  releases: "https://github.com/rontowerdragonsingingZi/enblog/releases",
   downloads: {
     windows: {
-      href: "https://github.com/rontowerdragonsingingZi/enblog/releases",
-      file: "SnapTranslate_Setup_x64.exe"
+      href: "https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe",
+      file: "SnapTranslate_Setup_1.0.54.exe"
     },
     android: {
-      href: "https://github.com/rontowerdragonsingingZi/enblog/releases",
-      file: "SnapTranslate_Android.apk"
+      href: "https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/SnapTranslate_Android_1.0.53.apk",
+      file: "SnapTranslate_Android_1.0.53.apk"
     }
   }
 };
