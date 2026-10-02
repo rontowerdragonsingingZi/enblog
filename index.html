@@ -8,12 +8,12 @@
   <meta name="keywords" content="Snap Translate, screen OCR, region capture, desktop translator, Windows translator, floating translation card">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="rontowerdragonsingingZi">
-  <meta name="theme-color" content="#17211e">
+  <meta name="theme-color" content="#141414">
   <link rel="canonical" href="https://rontowerdragonsingingzi.github.io/enblog/">
   <link rel="alternate" hreflang="en" href="https://rontowerdragonsingingzi.github.io/enblog/">
   <link rel="alternate" hreflang="zh-Hans" href="https://rontowerdragonsingingzi.github.io/enblog/html/zh.html">
   <link rel="alternate" hreflang="x-default" href="https://rontowerdragonsingingzi.github.io/enblog/">
-  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/icon-128.png" type="image/png">
   <link rel="apple-touch-icon" href="images/icon-512.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
@@ -32,9 +32,6 @@
   <meta name="twitter:title" content="Snap Translate — Screen region OCR and floating translation">
   <meta name="twitter:description" content="Drag a region. Read it on device. Keep the translation in a floating card.">
   <meta name="twitter:image" content="https://rontowerdragonsingingzi.github.io/enblog/images/icon-512.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
   {
@@ -70,7 +67,7 @@
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="index.html"><img src="images/icon-512.png" width="36" height="36" alt="">Snap Translate</a>
+      <a class="brand" href="index.html"><img src="images/icon-512.png" width="28" height="28" alt="">Snap Translate</a>
       <input class="nav-toggle" type="checkbox" id="nav-toggle">
       <label class="nav-toggle-label" for="nav-toggle">Menu</label>
       <nav class="nav" aria-label="Primary">
@@ -85,103 +82,78 @@
   <main id="main">
     <div class="wrap hero">
       <div>
-        <p class="kicker">Region capture translator</p>
-        <h1>Read the screen. Leave the translation there.</h1>
-        <p class="lede">Snap Translate is not copy, paste, and click translate. Press a hotkey, drag a region, and keep the result in a card you can move.</p>
+        <h1>Snap Translate</h1>
+        <p class="lede">Press a hotkey, drag a rectangle, and leave the translation in a card. OCR runs on the machine. No account.</p>
         <div class="actions">
-          <a class="btn btn-primary" data-download="windows" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe">Download for Windows</a>
-          <a class="btn btn-ghost" href="html/download.html">All downloads</a>
+          <a class="btn" data-download="windows" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe"><span class="ico ico-down" aria-hidden="true"></span>Windows 1.0.54</a>
+          <a class="btn btn-ghost" data-download="android" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/SnapTranslate_Android_1.0.53.apk"><span class="ico ico-phone" aria-hidden="true"></span>Android 1.0.53</a>
         </div>
-        <ul class="meta">
-          <li>Version <span data-version>1.0.54</span></li>
-          <li>On-device OCR</li>
-          <li>No account</li>
-        </ul>
+        <p class="fine"><span data-size="windows">101.4 MB</span> installer, Tesseract included. APK <span data-size="android">89.3 MB</span>.</p>
       </div>
-      <figure class="stage">
-        <div class="stage-top"><span>Ctrl + Shift + T</span><span>Example</span></div>
-        <div class="marquee">
-          <p lang="en">The meeting starts at nine.</p>
+      <div class="desk" data-board>
+        <div class="desk-bar">
+          <img src="images/icon-512.png" width="16" height="16" alt="">
+          <span>Sample screen</span>
+          <span><span class="ico ico-pointer" aria-hidden="true"></span> Drag a region</span>
         </div>
-        <div class="card-float">
-          <small>Translation</small>
-          <strong lang="zh-Hans">会议九点开始。</strong>
+        <div class="sheet">
+          <p data-src="Quarterly review starts at nine." data-dst="季度评审九点开始。">Quarterly review starts at nine.</p>
+          <p data-src="Send the signed file before Friday." data-dst="请在周五前发回签字文件。">Send the signed file before Friday.</p>
+          <p lang="ja" data-src="会議室は3階です。" data-dst="会议室在三楼。">会議室は3階です。</p>
         </div>
-      </figure>
+        <div class="sel" data-select hidden></div>
+        <aside class="float" data-card hidden>
+          <header data-grip>
+            <span class="ico ico-move" aria-hidden="true"></span>
+            <span>Result</span>
+            <button type="button" data-close aria-label="Close"><span class="ico ico-x" aria-hidden="true"></span></button>
+          </header>
+          <p data-ocr></p>
+          <p class="out" data-out></p>
+          <footer>
+            <button type="button" data-copy="[data-out]" aria-label="Copy translation"><span class="ico ico-copy" aria-hidden="true"></span></button>
+          </footer>
+        </aside>
+      </div>
     </div>
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <h2>What it does</h2>
-          <p class="lede">A desktop loop for text that is already on screen: capture, read, translate, pin.</p>
-        </div>
-        <div class="grid">
-          <article class="panel">
-            <h3>Free region</h3>
-            <p>A full-screen mask and a drag selection. The default hotkey is Ctrl + Shift + T.</p>
-          </article>
-          <article class="panel">
-            <h3>Local OCR</h3>
-            <p>Tesseract runs on the machine. The Windows installer bundles it, so OCR does not need a separate setup.</p>
-          </article>
-          <article class="panel">
-            <h3>Floating card</h3>
-            <p>Screenshot, source, and translation stay in a card you can drag, resize, copy, or close.</p>
-          </article>
-          <article class="panel">
-            <h3>Two engines</h3>
-            <p>Google Translate by default, or a LibreTranslate URL you set yourself.</p>
-          </article>
-          <article class="panel">
-            <h3>Tray and startup</h3>
-            <p>Hide to the system tray and start with Windows, macOS, or Linux.</p>
-          </article>
-          <article class="panel">
-            <h3>One instance</h3>
-            <p>A second launch focuses the window that is already running. Reinstalling upgrades in place.</p>
-          </article>
-        </div>
-      </div>
+    <section class="wrap block">
+      <h2>What stays on the machine</h2>
+      <ul class="facts">
+        <li><span class="ico ico-key" aria-hidden="true"></span><div><b>Ctrl + Shift + T</b><span>Default hotkey. You can change it.</span></div></li>
+        <li><span class="ico ico-scan" aria-hidden="true"></span><div><b>Local Tesseract</b><span>The Windows installer already includes OCR.</span></div></li>
+        <li><span class="ico ico-lang" aria-hidden="true"></span><div><b>Google or LibreTranslate</b><span>Recognized text goes to the engine you pick. The screenshot does not.</span></div></li>
+        <li><span class="ico ico-window" aria-hidden="true"></span><div><b>One floating card</b><span>Drag it, resize it, copy either side, or hide to the tray.</span></div></li>
+        <li><span class="ico ico-shield" aria-hidden="true"></span><div><b>One install path</b><span>Reinstalling upgrades in place. A second launch focuses the open window.</span></div></li>
+      </ul>
     </section>
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Four moves</h2>
-        </div>
-        <div class="steps">
-          <article class="step"><h3>Summon</h3><p>Press the hotkey, or use the tray menu.</p></article>
-          <article class="step"><h3>Select</h3><p>Drag across the text you want read.</p></article>
-          <article class="step"><h3>Wait</h3><p>OCR runs locally, then the chosen engine translates.</p></article>
-          <article class="step"><h3>Keep</h3><p>Move the card. Copy either side. Close it when done.</p></article>
-        </div>
-      </div>
-    </section>
-    <section id="download">
-      <div class="wrap">
-        <div class="section-head">
-          <h2>Download</h2>
-          <p class="lede">The installer and APK are hosted files. The buttons download them directly.</p>
-        </div>
-        <div class="downloads">
-          <article class="panel download-card">
-            <h3>Windows 1.0.54</h3>
-            <p>x64 installer for Windows 10 and 11. Tesseract is included.</p>
-            <span class="file" data-file>SnapTranslate_Setup_1.0.54.exe</span>
-            <a class="btn btn-primary" data-download="windows" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe">Get the installer</a>
-          </article>
-          <article class="panel download-card">
-            <h3>Android 1.0.53</h3>
-            <p>APK. Install it yourself. It is not a store listing.</p>
-            <span class="file" data-file>SnapTranslate_Android_1.0.53.apk</span>
-            <a class="btn btn-ghost" data-download="android" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/SnapTranslate_Android_1.0.53.apk">Get the APK</a>
-          </article>
-          <article class="panel download-card">
-            <h3>macOS and Linux</h3>
-            <p>Supported in the app. Packaged downloads are not published on this page yet.</p>
-            <a class="btn btn-ghost" href="html/guide.html">Read the guide</a>
-          </article>
-        </div>
-      </div>
+    <section class="wrap block" id="download">
+      <h2>Files</h2>
+      <ul class="files">
+        <li>
+          <span class="ico ico-monitor" aria-hidden="true"></span>
+          <div>
+            <strong>Windows 10 / 11 x64</strong>
+            <p><span class="file" data-file>SnapTranslate_Setup_1.0.54.exe</span> · <span data-size="windows">101.4 MB</span></p>
+          </div>
+          <a class="btn" data-download="windows" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe"><span class="ico ico-down" aria-hidden="true"></span>Download</a>
+        </li>
+        <li>
+          <span class="ico ico-phone" aria-hidden="true"></span>
+          <div>
+            <strong>Android</strong>
+            <p><span class="file" data-file>SnapTranslate_Android_1.0.53.apk</span> · <span data-size="android">89.3 MB</span></p>
+          </div>
+          <a class="btn btn-ghost" data-download="android" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/SnapTranslate_Android_1.0.53.apk"><span class="ico ico-down" aria-hidden="true"></span>Download</a>
+        </li>
+        <li>
+          <span class="ico ico-crop" aria-hidden="true"></span>
+          <div>
+            <strong>macOS / Linux</strong>
+            <p>Supported. No packaged download on this page yet.</p>
+          </div>
+          <a class="btn btn-ghost" href="html/guide.html">Guide</a>
+        </li>
+      </ul>
     </section>
   </main>
   <footer class="site-footer">

@@ -8,12 +8,12 @@
   <meta name="keywords" content="Snap Translate, 截屏翻译, 区域 OCR, 桌面翻译, Windows 翻译, 悬浮卡片">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="rontowerdragonsingingZi">
-  <meta name="theme-color" content="#17211e">
+  <meta name="theme-color" content="#141414">
   <link rel="canonical" href="https://rontowerdragonsingingzi.github.io/enblog/html/zh.html">
   <link rel="alternate" hreflang="en" href="https://rontowerdragonsingingzi.github.io/enblog/">
   <link rel="alternate" hreflang="zh-Hans" href="https://rontowerdragonsingingzi.github.io/enblog/html/zh.html">
   <link rel="alternate" hreflang="x-default" href="https://rontowerdragonsingingzi.github.io/enblog/">
-  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../images/icon-128.png" type="image/png">
   <link rel="apple-touch-icon" href="../images/icon-512.png">
   <link rel="manifest" href="../site.webmanifest">
   <link rel="sitemap" type="application/xml" href="../sitemap.xml">
@@ -30,9 +30,6 @@
   <meta name="twitter:title" content="Snap Translate — 区域截屏、本地 OCR 与悬浮翻译">
   <meta name="twitter:description" content="框选区域，本机识别，译文留在悬浮卡片上。">
   <meta name="twitter:image" content="https://rontowerdragonsingingzi.github.io/enblog/images/icon-512.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
   <script type="application/ld+json">
   {
@@ -53,7 +50,7 @@
   <a class="skip" href="#main">跳到正文</a>
   <header class="site-header">
     <div class="wrap bar">
-      <a class="brand" href="zh.html"><img src="../images/icon-512.png" width="36" height="36" alt="">Snap Translate</a>
+      <a class="brand" href="zh.html"><img src="../images/icon-512.png" width="28" height="28" alt="">Snap Translate</a>
       <input class="nav-toggle" type="checkbox" id="nav-toggle">
       <label class="nav-toggle-label" for="nav-toggle">菜单</label>
       <nav class="nav" aria-label="主导航">
@@ -68,101 +65,78 @@
   <main id="main">
     <div class="wrap hero">
       <div>
-        <p class="kicker">区域截屏翻译</p>
-        <h1>读屏幕上的字，把译文留在原地。</h1>
-        <p class="lede">不是复制、粘贴、再点翻译。按下快捷键，拖一块区域，译文留在可以挪走的卡片上。</p>
+        <h1>Snap Translate</h1>
+        <p class="lede">按快捷键，拖出一块区域。文字在本机识别，译文留在卡片上。不用注册。</p>
         <div class="actions">
-          <a class="btn btn-primary" data-download="windows" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe">下载 Windows 版</a>
-          <a class="btn btn-ghost" href="download.html">全部下载</a>
+          <a class="btn" data-download="windows" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe"><span class="ico ico-down" aria-hidden="true"></span>Windows 1.0.54</a>
+          <a class="btn btn-ghost" data-download="android" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/SnapTranslate_Android_1.0.53.apk"><span class="ico ico-phone" aria-hidden="true"></span>Android 1.0.53</a>
         </div>
-        <ul class="meta">
-          <li>版本 <span data-version>1.0.54</span></li>
-          <li>本机 OCR</li>
-          <li>无需账号</li>
-        </ul>
+        <p class="fine">安装包 <span data-size="windows">101.4 MB</span>，已含 Tesseract。APK <span data-size="android">89.3 MB</span>。</p>
       </div>
-      <figure class="stage">
-        <div class="stage-top"><span>Ctrl + Shift + T</span><span>示例</span></div>
-        <div class="marquee">
-          <p lang="en">The meeting starts at nine.</p>
+      <div class="desk" data-board>
+        <div class="desk-bar">
+          <img src="../images/icon-512.png" width="16" height="16" alt="">
+          <span>示例画面</span>
+          <span><span class="ico ico-pointer" aria-hidden="true"></span> 拖一块区域</span>
         </div>
-        <div class="card-float">
-          <small>译文</small>
-          <strong>会议九点开始。</strong>
+        <div class="sheet">
+          <p data-src="Quarterly review starts at nine." data-dst="季度评审九点开始。">Quarterly review starts at nine.</p>
+          <p data-src="Send the signed file before Friday." data-dst="请在周五前发回签字文件。">Send the signed file before Friday.</p>
+          <p lang="ja" data-src="会議室は3階です。" data-dst="会议室在三楼。">会議室は3階です。</p>
         </div>
-      </figure>
+        <div class="sel" data-select hidden></div>
+        <aside class="float" data-card hidden>
+          <header data-grip>
+            <span class="ico ico-move" aria-hidden="true"></span>
+            <span>结果</span>
+            <button type="button" data-close aria-label="关闭"><span class="ico ico-x" aria-hidden="true"></span></button>
+          </header>
+          <p data-ocr></p>
+          <p class="out" data-out></p>
+          <footer>
+            <button type="button" data-copy="[data-out]" aria-label="复制译文"><span class="ico ico-copy" aria-hidden="true"></span></button>
+          </footer>
+        </aside>
+      </div>
     </div>
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <h2>它做什么</h2>
-          <p class="lede">给已经出现在屏幕上的文字：截取、识别、翻译、钉住。</p>
-        </div>
-        <div class="grid">
-          <article class="panel">
-            <h3>自由选区</h3>
-            <p>全屏遮罩，鼠标拖出区域。默认快捷键是 Ctrl + Shift + T，可以改。</p>
-          </article>
-          <article class="panel">
-            <h3>本机 OCR</h3>
-            <p>使用本机 Tesseract。Windows 安装包已带上 OCR，不用再单独安装。</p>
-          </article>
-          <article class="panel">
-            <h3>悬浮卡片</h3>
-            <p>截图、原文和译文在同一张卡片上。可拖动、缩放、复制、关闭。</p>
-          </article>
-          <article class="panel">
-            <h3>两种翻译</h3>
-            <p>默认 Google 翻译，也可以填自己的 LibreTranslate 地址。</p>
-          </article>
-          <article class="panel">
-            <h3>托盘与自启</h3>
-            <p>可收进系统托盘，并在 Windows、macOS、Linux 上开机启动。</p>
-          </article>
-          <article class="panel">
-            <h3>只开一个</h3>
-            <p>再次启动会唤起已有窗口。重新安装是原位升级，不另开一套目录。</p>
-          </article>
-        </div>
-      </div>
+    <section class="wrap block">
+      <h2>留在本机的部分</h2>
+      <ul class="facts">
+        <li><span class="ico ico-key" aria-hidden="true"></span><div><b>Ctrl + Shift + T</b><span>默认快捷键，可以改。</span></div></li>
+        <li><span class="ico ico-scan" aria-hidden="true"></span><div><b>本机 Tesseract</b><span>Windows 安装包已经带上 OCR。</span></div></li>
+        <li><span class="ico ico-lang" aria-hidden="true"></span><div><b>Google 或 LibreTranslate</b><span>识别出的文字会发给所选引擎。截图不会。</span></div></li>
+        <li><span class="ico ico-window" aria-hidden="true"></span><div><b>一张悬浮卡片</b><span>可拖动、缩放、复制原文或译文，也可收进托盘。</span></div></li>
+        <li><span class="ico ico-shield" aria-hidden="true"></span><div><b>固定安装位置</b><span>再次安装是原位升级。第二次启动会唤起已有窗口。</span></div></li>
+      </ul>
     </section>
-    <section>
-      <div class="wrap">
-        <div class="section-head"><h2>四步</h2></div>
-        <div class="steps">
-          <article class="step"><h3>唤出</h3><p>按快捷键，或从托盘菜单进入。</p></article>
-          <article class="step"><h3>框选</h3><p>拖过要识别的文字。</p></article>
-          <article class="step"><h3>等待</h3><p>本机 OCR 完成后，按所选引擎翻译。</p></article>
-          <article class="step"><h3>留下</h3><p>挪动卡片，复制原文或译文，用完关闭。</p></article>
-        </div>
-      </div>
-    </section>
-    <section>
-      <div class="wrap">
-        <div class="section-head">
-          <h2>下载</h2>
-          <p class="lede">安装包和 APK 放在云上，按钮直接下载文件。</p>
-        </div>
-        <div class="downloads">
-          <article class="panel download-card">
-            <h3>Windows 1.0.54</h3>
-            <p>Windows 10 / 11 x64 安装包，已包含 Tesseract。</p>
-            <span class="file" data-file>SnapTranslate_Setup_1.0.54.exe</span>
-            <a class="btn btn-primary" data-download="windows" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe">获取安装包</a>
-          </article>
-          <article class="panel download-card">
-            <h3>Android 1.0.53</h3>
-            <p>APK，需自行安装，不是应用商店页面。</p>
-            <span class="file" data-file>SnapTranslate_Android_1.0.53.apk</span>
-            <a class="btn btn-ghost" data-download="android" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/SnapTranslate_Android_1.0.53.apk">获取 APK</a>
-          </article>
-          <article class="panel download-card">
-            <h3>macOS 与 Linux</h3>
-            <p>应用支持这两个平台。此页尚未提供打包下载。</p>
-            <a class="btn btn-ghost" href="guide.html">查看使用说明</a>
-          </article>
-        </div>
-      </div>
+    <section class="wrap block">
+      <h2>文件</h2>
+      <ul class="files">
+        <li>
+          <span class="ico ico-monitor" aria-hidden="true"></span>
+          <div>
+            <strong>Windows 10 / 11 x64</strong>
+            <p><span class="file" data-file>SnapTranslate_Setup_1.0.54.exe</span> · <span data-size="windows">101.4 MB</span></p>
+          </div>
+          <a class="btn" data-download="windows" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/dwn/SnapTranslate_Setup_1.0.54.exe"><span class="ico ico-down" aria-hidden="true"></span>下载</a>
+        </li>
+        <li>
+          <span class="ico ico-phone" aria-hidden="true"></span>
+          <div>
+            <strong>Android</strong>
+            <p><span class="file" data-file>SnapTranslate_Android_1.0.53.apk</span> · <span data-size="android">89.3 MB</span></p>
+          </div>
+          <a class="btn btn-ghost" data-download="android" href="https://pub-40a7fb290d21422a914346f0b0ba2afd.r2.dev/SnapTranslate_Android_1.0.53.apk"><span class="ico ico-down" aria-hidden="true"></span>下载</a>
+        </li>
+        <li>
+          <span class="ico ico-crop" aria-hidden="true"></span>
+          <div>
+            <strong>macOS / Linux</strong>
+            <p>应用支持。此页还没有打包下载。</p>
+          </div>
+          <a class="btn btn-ghost" href="guide.html">使用说明</a>
+        </li>
+      </ul>
     </section>
   </main>
   <footer class="site-footer">
