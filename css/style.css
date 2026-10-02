@@ -67,27 +67,12 @@ button, .btn { font: inherit; }
 }
 
 .ico {
-  display: inline-block;
   width: 16px;
   height: 16px;
-  background: currentColor;
+  display: inline-block;
   vertical-align: -3px;
   flex: 0 0 auto;
 }
-.ico-crop { -webkit-mask: url("../images/icons/crop.svg") center / contain no-repeat; mask: url("../images/icons/crop.svg") center / contain no-repeat; }
-.ico-scan { -webkit-mask: url("../images/icons/scan-text.svg") center / contain no-repeat; mask: url("../images/icons/scan-text.svg") center / contain no-repeat; }
-.ico-lang { -webkit-mask: url("../images/icons/languages.svg") center / contain no-repeat; mask: url("../images/icons/languages.svg") center / contain no-repeat; }
-.ico-window { -webkit-mask: url("../images/icons/app-window.svg") center / contain no-repeat; mask: url("../images/icons/app-window.svg") center / contain no-repeat; }
-.ico-key { -webkit-mask: url("../images/icons/keyboard.svg") center / contain no-repeat; mask: url("../images/icons/keyboard.svg") center / contain no-repeat; }
-.ico-down { -webkit-mask: url("../images/icons/download.svg") center / contain no-repeat; mask: url("../images/icons/download.svg") center / contain no-repeat; }
-.ico-monitor { -webkit-mask: url("../images/icons/monitor.svg") center / contain no-repeat; mask: url("../images/icons/monitor.svg") center / contain no-repeat; }
-.ico-phone { -webkit-mask: url("../images/icons/smartphone.svg") center / contain no-repeat; mask: url("../images/icons/smartphone.svg") center / contain no-repeat; }
-.ico-shield { -webkit-mask: url("../images/icons/shield.svg") center / contain no-repeat; mask: url("../images/icons/shield.svg") center / contain no-repeat; }
-.ico-copy { -webkit-mask: url("../images/icons/copy.svg") center / contain no-repeat; mask: url("../images/icons/copy.svg") center / contain no-repeat; }
-.ico-move { -webkit-mask: url("../images/icons/move.svg") center / contain no-repeat; mask: url("../images/icons/move.svg") center / contain no-repeat; }
-.ico-x { -webkit-mask: url("../images/icons/x.svg") center / contain no-repeat; mask: url("../images/icons/x.svg") center / contain no-repeat; }
-.ico-menu { -webkit-mask: url("../images/icons/menu.svg") center / contain no-repeat; mask: url("../images/icons/menu.svg") center / contain no-repeat; }
-.ico-pointer { -webkit-mask: url("../images/icons/mouse-pointer-2.svg") center / contain no-repeat; mask: url("../images/icons/mouse-pointer-2.svg") center / contain no-repeat; }
 
 .hero {
   display: grid;
@@ -196,7 +181,7 @@ h2 { font-size: 18px; margin: 0 0 10px; }
 .facts li { grid-template-columns: 22px 1fr; }
 .facts b, .files strong { display: block; font-weight: 600; }
 .facts span, .files p { color: var(--muted); font-size: 13px; margin: 0; }
-.facts .ico, .files .ico { color: var(--peach); }
+.facts .ico, .files .ico, .desk-bar .ico { color: var(--peach); }
 
 .site-footer { border-top: 1px solid var(--line); margin-top: 28px; padding: 16px 0 28px; color: var(--muted); font-size: 13px; }
 .foot { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
@@ -225,9 +210,7 @@ th { color: var(--muted); font-size: 12px; font-weight: 600; }
     content: "";
     width: 16px;
     height: 16px;
-    background: #f2f2f2;
-    -webkit-mask: url("../images/icons/menu.svg") center / contain no-repeat;
-    mask: url("../images/icons/menu.svg") center / contain no-repeat;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f2f2f2' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M4 5h16'/%3E%3Cpath d='M4 12h16'/%3E%3Cpath d='M4 19h16'/%3E%3C/svg%3E") center / contain no-repeat;
   }
   .nav {
     display: none;
