@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snap Translate — 区域截屏、本地 OCR 与悬浮翻译</title>
+  <meta name="description" content="Snap Translate 用快捷键框选屏幕区域，在本机做 OCR，并把译文留在可拖动的悬浮卡片上。Windows 安装包与 Android APK 放在 GitHub Releases。">
+  <meta name="keywords" content="Snap Translate, 截屏翻译, 区域 OCR, 桌面翻译, Windows 翻译, 悬浮卡片">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="rontowerdragonsingingZi">
+  <meta name="theme-color" content="#17211e">
+  <link rel="canonical" href="https://rontowerdragonsingingzi.github.io/enblog/html/zh.html">
+  <link rel="alternate" hreflang="en" href="https://rontowerdragonsingingzi.github.io/enblog/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://rontowerdragonsingingzi.github.io/enblog/html/zh.html">
+  <link rel="alternate" hreflang="x-default" href="https://rontowerdragonsingingzi.github.io/enblog/">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../images/icon-512.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="sitemap" type="application/xml" href="../sitemap.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Snap Translate">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:title" content="Snap Translate — 区域截屏、本地 OCR 与悬浮翻译">
+  <meta property="og:description" content="框选区域，本机识别，译文留在悬浮卡片上。">
+  <meta property="og:url" content="https://rontowerdragonsingingzi.github.io/enblog/html/zh.html">
+  <meta property="og:image" content="https://rontowerdragonsingingzi.github.io/enblog/images/icon-512.png">
+  <meta property="og:image:alt" content="Snap Translate 应用图标">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Snap Translate — 区域截屏、本地 OCR 与悬浮翻译">
+  <meta name="twitter:description" content="框选区域，本机识别，译文留在悬浮卡片上。">
+  <meta name="twitter:image" content="https://rontowerdragonsingingzi.github.io/enblog/images/icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,640&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Snap Translate",
+    "inLanguage": "zh-Hans",
+    "operatingSystem": "Windows 10, Windows 11, Android, macOS, Linux",
+    "applicationCategory": "UtilitiesApplication",
+    "softwareVersion": "1.0.53",
+    "description": "框选屏幕区域，使用本机 Tesseract OCR，并把译文显示在可拖动的悬浮卡片上。",
+    "downloadUrl": "https://github.com/rontowerdragonsingingZi/enblog/releases",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到正文</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="zh.html"><img src="../images/icon-512.png" width="36" height="36" alt="">Snap Translate</a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle-label" for="nav-toggle">菜单</label>
+      <nav class="nav" aria-label="主导航">
+        <a href="zh.html" aria-current="page">首页</a>
+        <a href="download.html">下载</a>
+        <a href="guide.html">使用</a>
+        <a href="privacy.html">隐私</a>
+        <a class="lang" href="../index.html" hreflang="en" lang="en">EN</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap hero">
+      <div>
+        <p class="kicker">区域截屏翻译</p>
+        <h1>读屏幕上的字，把译文留在原地。</h1>
+        <p class="lede">不是复制、粘贴、再点翻译。按下快捷键，拖一块区域，译文留在可以挪走的卡片上。</p>
+        <div class="actions">
+          <a class="btn btn-primary" data-download="windows" href="https://github.com/rontowerdragonsingingZi/enblog/releases">下载 Windows 版</a>
+          <a class="btn btn-ghost" href="download.html">全部下载</a>
+        </div>
+        <ul class="meta">
+          <li>版本 <span data-version>1.0.53</span></li>
+          <li>本机 OCR</li>
+          <li>无需账号</li>
+        </ul>
+      </div>
+      <figure class="stage">
+        <div class="stage-top"><span>Ctrl + Shift + T</span><span>示例</span></div>
+        <div class="marquee">
+          <p lang="en">The meeting starts at nine.</p>
+        </div>
+        <div class="card-float">
+          <small>译文</small>
+          <strong>会议九点开始。</strong>
+        </div>
+      </figure>
+    </div>
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>它做什么</h2>
+          <p class="lede">给已经出现在屏幕上的文字：截取、识别、翻译、钉住。</p>
+        </div>
+        <div class="grid">
+          <article class="panel">
+            <h3>自由选区</h3>
+            <p>全屏遮罩，鼠标拖出区域。默认快捷键是 Ctrl + Shift + T，可以改。</p>
+          </article>
+          <article class="panel">
+            <h3>本机 OCR</h3>
+            <p>使用本机 Tesseract。Windows 安装包已带上 OCR，不用再单独安装。</p>
+          </article>
+          <article class="panel">
+            <h3>悬浮卡片</h3>
+            <p>截图、原文和译文在同一张卡片上。可拖动、缩放、复制、关闭。</p>
+          </article>
+          <article class="panel">
+            <h3>两种翻译</h3>
+            <p>默认 Google 翻译，也可以填自己的 LibreTranslate 地址。</p>
+          </article>
+          <article class="panel">
+            <h3>托盘与自启</h3>
+            <p>可收进系统托盘，并在 Windows、macOS、Linux 上开机启动。</p>
+          </article>
+          <article class="panel">
+            <h3>只开一个</h3>
+            <p>再次启动会唤起已有窗口。重新安装是原位升级，不另开一套目录。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="section-head"><h2>四步</h2></div>
+        <div class="steps">
+          <article class="step"><h3>唤出</h3><p>按快捷键，或从托盘菜单进入。</p></article>
+          <article class="step"><h3>框选</h3><p>拖过要识别的文字。</p></article>
+          <article class="step"><h3>等待</h3><p>本机 OCR 完成后，按所选引擎翻译。</p></article>
+          <article class="step"><h3>留下</h3><p>挪动卡片，复制原文或译文，用完关闭。</p></article>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>安装包在 Releases</h2>
+          <p class="lede">这个仓库里的是网页。安装包和 APK 作为 Release 文件发布，不放进网站的 Git 历史。</p>
+        </div>
+        <div class="downloads">
+          <article class="panel download-card">
+            <h3>Windows</h3>
+            <p>Windows 10 / 11 x64 安装包，已包含 Tesseract。</p>
+            <span class="file" data-file>SnapTranslate_Setup_x64.exe</span>
+            <a class="btn btn-primary" data-download="windows" href="https://github.com/rontowerdragonsingingZi/enblog/releases">获取安装包</a>
+          </article>
+          <article class="panel download-card">
+            <h3>Android</h3>
+            <p>Release APK，需自行安装，不是应用商店页面。</p>
+            <span class="file" data-file>SnapTranslate_Android.apk</span>
+            <a class="btn btn-ghost" data-download="android" href="https://github.com/rontowerdragonsingingZi/enblog/releases">获取 APK</a>
+          </article>
+          <article class="panel download-card">
+            <h3>macOS 与 Linux</h3>
+            <p>应用支持这两个平台。此页尚未提供打包下载。</p>
+            <a class="btn btn-ghost" href="guide.html">查看使用说明</a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>© <span data-year>2026</span> Snap Translate。版本 <span data-version>1.0.53</span>。</p>
+      <nav aria-label="页脚">
+        <a href="download.html">下载</a>
+        <a href="guide.html">使用</a>
+        <a href="privacy.html">隐私</a>
+        <a href="https://github.com/rontowerdragonsingingZi/enblog">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

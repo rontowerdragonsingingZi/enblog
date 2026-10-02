@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to use Snap Translate</title>
+  <meta name="description" content="Use Snap Translate: set languages, press Ctrl+Shift+T, drag a screen region, and copy the translation from the floating card.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#17211e">
+  <link rel="canonical" href="https://rontowerdragonsingingzi.github.io/enblog/html/guide.html">
+  <link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="How to use Snap Translate">
+  <meta property="og:description" content="Hotkey, region select, local OCR, and the floating result card.">
+  <meta property="og:url" content="https://rontowerdragonsingingzi.github.io/enblog/html/guide.html">
+  <meta property="og:image" content="https://rontowerdragonsingingzi.github.io/enblog/images/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="brand" href="../index.html"><img src="../images/icon-512.png" width="36" height="36" alt="">Snap Translate</a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle-label" for="nav-toggle">Menu</label>
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="download.html">Download</a>
+        <a href="guide.html" aria-current="page">Guide</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="lang" href="zh.html" hreflang="zh-Hans" lang="zh-Hans">中文</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap prose">
+    <h1>Guide</h1>
+    <ol>
+      <li>Start the app. You can hide it to the tray after launch.</li>
+      <li>Set the source and target languages.</li>
+      <li>Press Ctrl + Shift + T. The shortcut can be changed.</li>
+      <li>Drag a rectangle around the text.</li>
+      <li>Wait for OCR and translation.</li>
+      <li>Drag the card by its title. Resize from the corner. Copy the translation or the source. Close the card, or click empty space to hide to the tray.</li>
+    </ol>
+    <h2>OCR</h2>
+    <p>Recognition uses local Tesseract only. The Windows installer already includes it. On macOS and Linux, install Tesseract and the language data you need, such as English plus Simplified Chinese. If it is missing, capture will tell you.</p>
+    <h2>Translation</h2>
+    <p>Google Translate is the default. You can point the app at your own LibreTranslate URL instead. Recognized text is sent to whichever engine you select. The screenshot itself stays on the machine.</p>
+    <h2>Permissions</h2>
+    <p>Windows may ask for screen capture the first time. macOS needs Screen Recording and Accessibility for the global hotkey. Android does not offer the same tray and global hotkey model; use the in-app capture action there.</p>
+  </main>
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <p>© <span data-year>2026</span> Snap Translate</p>
+      <nav aria-label="Footer"><a href="download.html">Download</a></nav>
+    </div>
+  </footer>
+  <script src="../js/config.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

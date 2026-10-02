@@ -1,0 +1,19 @@
+{
+  "name": "Snap Translate",
+  "short_name": "Snap Translate",
+  "description": "Capture a screen region, read it offline, and keep the translation in a floating card.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3efe6",
+  "theme_color": "#17211e",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
